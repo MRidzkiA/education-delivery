@@ -6,6 +6,8 @@
 **Kontributor:** Raka (koordinator), Bima (arsitektur), Sinta (desain), Dimas (developer), Putri (data), Dewi (keamanan), Edo (deployment), Budi (QA)
 **Catatan:** JANGAN publish/deploy/push ke mana pun tanpa persetujuan Ridzki/pemilik. Harga, testimoni, dan nomor WhatsApp TIDAK dicantumkan di dokumen ini karena tidak ada yang terverifikasi — lihat §9.
 
+**Perubahan 10 Nov 2026 (permintaan owner, via Ridzki):** kelas kini hanya **Art Class** saja — Baby Class & Toddler Class dihapus dari website. Ditambah halaman galeri karya (`galeri.html`, 6 slot placeholder — foto karya asli menunggu kiriman owner). Alur bisnis berubah: DM IG → ceritakan kebutuhan anak → pilih jadwal → guru datang ke rumah. Dokumen `sections/` masih mendeskripsikan MVP 3-program versi 9 Nov 2026 dan belum diperbarui.
+
 ---
 
 ## 1. Gambaran Produk
@@ -16,7 +18,7 @@ Aplikasi ini adalah website katalog program + alat pendaftaran: orang tua membac
 
 **Alur bisnis yang sudah berjalan (diikuti apa adanya):** DM IG → ceritakan kebutuhan anak → pilih program & jadwal → guru datang ke rumah.
 
-**Program:** Baby Class (bayi), Toddler Class (balita), Art Class (anak kreatif). Layanan di dalamnya: Sensory Play, Fun Activities, Movement Play.
+**Program:** Art Class saja (anak kreatif) — sejak 10 Nov 2026 atas permintaan owner; Baby Class & Toddler Class dihapus. Layanan di dalamnya: Sensory Play, Fun Activities, Movement Play.
 
 **Desain:** simple soft, terang dan hangat (panduan Sinta, `desain.md`): latar krem `#FFF9F0`, kartu putih, font Baloo 2 (judul) + Plus Jakarta Sans (isi), aksen lembut per program (Baby = biru `#5B8DEF`, Toddler = toska `#2FB3A6`, Art = merah `#F0725C`, Movement = hijau `#58B947`, emas `#E9A800` hanya aksen kecil), tombol utama merah `#E8402F`, mobile-first (desain untuk 360px dulu, max-width 1120px, radius kartu 22–26px, bayangan lembut).
 
@@ -36,7 +38,7 @@ v1 **tidak punya sistem login dan tidak punya panel admin**. Admin bekerja lewat
 | # | Fitur | Keterangan |
 |---|---|---|
 | 1 | Hero + tentang | Nama, motto, tagline, tombol ke booking & Instagram; chip layanan (Sensory Play, Fun Activities, Movement Play, Belajar di Rumah) |
-| 2 | Program | 3 kartu program (Baby, Toddler, Art) — foto, badge usia, 1 kalimat deskripsi, daftar layanan dengan centang warna aksen program |
+| 2 | Program | 1 kartu program (Art Class) + halaman galeri karya (`galeri.html`) — foto, badge, 1 kalimat deskripsi, daftar layanan dengan centang warna aksen program |
 | 3 | Cara daftar | 4 langkah: DM IG → ceritakan kebutuhan anak → pilih program & jadwal → guru datang ke rumah |
 | 4 | Formulir booking | Field wajib (lihat §5): nama orang tua, nama anak, usia anak (bulan), program (pilih 1 dari 3), jadwal yang diinginkan (hari + jam), alamat lengkap, kontak (IG/HP orang tua). Validasi: semua wajib diisi sebelum kirim |
 | 5 | Penyimpanan booking | Disimpan di `localStorage` key `ed_bookings` (lihat §5) + tombol "Lanjutkan ke DM Instagram" yang membuka http://s.id/educationdelivery dengan pesan booking terisi otomatis |
@@ -164,10 +166,10 @@ Website statis (`index.html`, `styles.css`, `app.js`) — **belum ada yang di-de
 
 | # | Yang dibutuhkan | Status |
 |---|---|---|
-| 1 | **Harga asli tiap program** (Baby / Toddler / Art Class) | Belum ada — jangan tulis angka apa pun sampai ada daftar harga resmi |
+| 1 | **Harga asli Art Class** | Belum ada — jangan tulis angka apa pun sampai ada daftar harga resmi |
 | 2 | **Testimoni asli** orang tua (dengan izin) | Belum ada — jangan tulis testimoni palsu; masuk Fase 2 |
 | 3 | **Nomor WhatsApp resmi** (bila ada) | **Tidak ada nomor WA terverifikasi** — kontak resmi hanya DM Instagram @educationdelivery; jangan mengarang nomor. Formulir memakai kontak IG/HP orang tua, bukan nomor WA bisnis |
-| 4 | **Foto asli** kegiatan/kelas dan logo (file logo perisai 4 kuadran) | Belum ada file foto asli — jangan pakai foto stok anak tanpa izin pemilik |
+| 4 | **Foto asli** kegiatan/kelas dan logo (file logo perisai 4 kuadran) + **foto karya anak untuk galeri** (6 slot di `galeri.html`) | Belum ada file foto asli — jangan pakai foto stok anak tanpa izin pemilik |
 | 5 | Detail jadwal operasional (hari/jam layanan) | Belum pasti — sampai ada, FAQ menjawab "tanyakan via DM" |
 | 6 | Area jangkauan home visit di luar Setiabudi | Belum pasti |
 | 7 | Persetujuan isi website + pilihan opsi deployment (§8) | Menunggu pemilik/Ridzki |

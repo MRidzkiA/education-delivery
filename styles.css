@@ -328,3 +328,29 @@ a:hover { color: var(--red-deep); }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* ---------- Galeri (10 Nov 2026 — permintaan owner: fokus Art Class) ---------- */
+.program-grid.single { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+.program-options.single { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+.gallery-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 28px; }
+.gallery-item {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden; margin: 0;
+}
+.gallery-placeholder {
+  min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  background: var(--surface-2); border-bottom: 1px dashed var(--line);
+  color: var(--muted); text-align: center; padding: 24px;
+}
+.gallery-placeholder .gallery-emoji { font-size: 56px; }
+.gallery-placeholder p { margin: 0; font-size: 15px; font-weight: 600; color: var(--ink-2); }
+.gallery-placeholder small { font-size: 13px; color: var(--muted); }
+.gallery-item figcaption { padding: 14px 18px; font-weight: 700; color: var(--ink); font-size: 15px; }
+.gallery-note { margin-top: 24px; font-size: 15px; }
+
+@media (min-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}

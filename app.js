@@ -10,8 +10,6 @@
   var STORAGE_KEY = 'ed_bookings';
   var MAX_AGE_DAYS = 7;
   var PROGRAM_NAMES = {
-    'baby-class': 'Baby Class',
-    'toddler-class': 'Toddler Class',
     'art-class': 'Art Class'
   };
 
